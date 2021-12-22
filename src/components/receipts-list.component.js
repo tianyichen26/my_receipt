@@ -54,7 +54,7 @@ export default class ReceiptsList extends Component {
   render() {
     return (
       <div>
-        <h3>Logged Receipts</h3>
+        <h3>Saved Receipts</h3>
         <table className="table">
           <thead className="thead-light">
             <tr>
