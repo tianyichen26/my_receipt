@@ -28,7 +28,7 @@ export default class CreateUser extends Component {
 
     console.log(user);
 
-    axios.post('https://receipt-server-node.herokuapp.com/adds', user)
+    axios.post('https://receipt-server-node.herokuapp.com/users/adds', user)
       .then(res => console.log(res.data));
 
     this.setState({

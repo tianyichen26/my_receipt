@@ -89,7 +89,7 @@ export default class CreateReceipt extends Component {
       date: this.state.date
     }
 
-    axios.post('https://receipt-server-node.herokuapp.com/add', receipt)
+    axios.post('https://receipt-server-node.herokuapp.com/receipts/add', receipt)
       .then(res => console.log(res.data));
 
     window.location = '/';
