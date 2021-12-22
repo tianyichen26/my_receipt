@@ -28,7 +28,7 @@ export default class EditReceipt extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:5001/receipts/'+this.props.match.params.id)
+    axios.get('https://receipt-server-node.herokuapp.com/receipts/'+this.props.match.params.id)
       .then(response => {
         this.setState({
           username: response.data.username,
@@ -42,7 +42,7 @@ export default class EditReceipt extends Component {
         console.log(error);
       })
 
-    axios.get('http://localhost:5001/users/')
+    axios.get('https://receipt-server-node.herokuapp.com/users')
       .then(response => {
         if (response.data.length > 0) {
           this.setState({
@@ -103,7 +103,7 @@ export default class EditReceipt extends Component {
     }
 
 
-    axios.post('http://localhost:5001/receipts/update/' + this.props.match.params.id, receipt)
+    axios.post('https://receipt-server-node.herokuapp.com/receipts/update/' + this.props.match.params.id, receipt)
       .then(res => console.log(res.data));
 
     window.location = '/';

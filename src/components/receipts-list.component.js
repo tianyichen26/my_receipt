@@ -27,7 +27,7 @@ export default class ReceiptsList extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:5001/receipts/')
+    axios.get('https://receipt-server-node.herokuapp.com/receipts')
       .then(response => {
         this.setState({ receipts: response.data })
       })
@@ -37,7 +37,7 @@ export default class ReceiptsList extends Component {
   }
 
   deleteReceipt(id) {
-    axios.delete('http://localhost:5001/receipts/'+id)
+    axios.delete('https://receipt-server-node.herokuapp.com/receipts'+id)
       .then(response => { console.log(response.data)});
 
     this.setState({
